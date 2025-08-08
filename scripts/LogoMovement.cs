@@ -27,5 +27,7 @@ public partial class LogoMovement : Sprite2D
         _isMoving = !_isMoving;
         SetProcess(_isMoving); // Enable/disable process based on movement state
         GD.Print("Movement toggled: " + _isMoving);
+
+        // Test
     }
 }
