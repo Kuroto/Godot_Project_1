@@ -1,11 +1,13 @@
-[gd_scene load_steps=5 format=3 uid="uid://n3qqg5fn06jt"]
+[gd_scene load_steps=6 format=3 uid="uid://n3qqg5fn06jt"]
 
+[ext_resource type="Script" uid="uid://dgm5dac55gx3m" path="res://scripts/GameManager.cs" id="1_q0lof"]
 [ext_resource type="PackedScene" uid="uid://k8b8a01l0wor" path="res://scenes/godotLogo.tscn" id="1_xnbe8"]
 [ext_resource type="Texture2D" uid="uid://d2hsch07ut7mo" path="res://assets/Sprites/playerSpaceship.png" id="2_0t2ff"]
 [ext_resource type="Script" uid="uid://5w3qdhje1v62" path="res://scripts/LogoMovement.cs" id="2_q0lof"]
 [ext_resource type="Script" uid="uid://cieljlpbd8x8f" path="res://scripts/playerMovement.cs" id="3_q0lof"]
 
-[node name="Buttons" type="Node2D"]
+[node name="PlayerStuff" type="Node2D"]
+script = ExtResource("1_q0lof")
 
 [node name="GodotLogo" parent="." instance=ExtResource("1_xnbe8")]
 position = Vector2(405, 544)

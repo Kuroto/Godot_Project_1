@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://crq62u32vf5uo"]
+
+[ext_resource type="Script" uid="uid://doh2d2rrddtjn" path="res://scripts/CustomSignalScript.cs" id="1_sfa0g"]
+
+[node name="CustomSignal" type="Node2D"]
+script = ExtResource("1_sfa0g")

@@ -6,6 +6,10 @@ public partial class playerMovement : Sprite2D
     private readonly int _speed = 400;
     private readonly float _rotationSpeed = 3f;
 
+    [Signal]
+    public delegate void HealthDepletedEventHandler(int oldValue, int newValue);
+    private int _health = 10;
+    
     public override void _Process(double delta)
     {
         float rotationDirection = 0;  // -1 = left, 1 = right
@@ -33,5 +37,16 @@ public partial class playerMovement : Sprite2D
         }
 
         Position += velocity * _speed * (float)delta;
+    }
+
+    public void TakeDamage(int amount)
+    {
+        int oldHealth = _health;
+        _health -= amount;
+
+        if (_health <= 0)
+        {
+            EmitSignal(SignalName.HealthDepleted, oldHealth, _health);
+        }
     }
 }
